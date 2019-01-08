@@ -1,0 +1,18 @@
+ana|Anabaptism
+ang|Anglicanism
+bap|Baptist Church
+cat|Catholic Church
+coc|Churches of Christ
+lds|The Church of Jesus Christ of Latter Day Saints
+doc|Disciples of Christ
+eoc|Eastern Orthodox
+jwc|Jehovah&rsquo;s Witnesses
+lut|Lutheranism
+met|Methodism
+non|Nondenominational evangelicalism
+ooc|Oriental Orthodox
+pen|Pentecostalism
+pre|Presbyterianism
+sda|Seventh-day Adventist Church
+uuc|Unitarian Universalism
+_x_|None/Other

@@ -1,0 +1,12 @@
+ath|Agnosticism/Atheism
+bah|Bah&aacute;'&iacute;
+bud|Buddhism
+chr|Christianity
+hin|Hinduism
+isl|Islam
+jai|Jainism
+jud|Judaism
+shi|Shinto
+sik|Sikhism
+tao|Taoism
+_x_|None/Other
