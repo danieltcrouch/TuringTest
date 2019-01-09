@@ -2,27 +2,31 @@
 
 function getStatistics( $type )
 {
-	$mysqli = new mysqli( 'localhost', 'id511081_dcrouch1', '1corinthians39', 'id511081_main' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
 
+    $actualTable = getActualTable( $type );
+    $infoTable = getInfoTable( $type );
+    $testTable = getTestTable( $type );
+    $userTable = getUserTable( $type );
 	$sql = "SELECT
-              tt_" . $type . "_users.groupId as of_group,
-              tt_" . $type . "_tests.groupId as on_group,
-              tt_" . $type . "_info.name as of_name,
-              tt_" . $type . "_actuals.userCount as of_count,
+              $userTable.groupId as of_group,
+              $testTable.groupId as on_group,
+              $infoTable.name as of_name,
+              $actualTable.userCount as of_count,
               COUNT(*) as test_count,
-              AVG(tt_" . $type . "_tests.percentCorrect) as user_avg,
-              (SELECT name FROM tt_" . $type . "_info WHERE tt_" . $type . "_info.groupId = tt_" . $type . "_tests.groupId LIMIT 1) as on_name
-            FROM tt_" . $type . "_tests
-              JOIN tt_" . $type . "_users     ON tt_" . $type . "_tests.userId = tt_" . $type . "_users.userId
-              JOIN tt_" . $type . "_info      ON tt_" . $type . "_users.groupId = tt_" . $type . "_info.groupId
-              JOIN tt_" . $type . "_actuals   ON tt_" . $type . "_users.groupId = tt_" . $type . "_actuals.groupId
+              AVG($testTable.percentCorrect) as user_avg,
+              (SELECT name FROM $infoTable WHERE $infoTable.groupId = $testTable.groupId LIMIT 1) as on_name
+            FROM $testTable
+              JOIN $userTable     ON $testTable.userId =  $userTable.userId
+              JOIN $infoTable     ON $userTable.groupId = $infoTable.groupId
+              JOIN $actualTable   ON $userTable.groupId = $actualTable.groupId
             GROUP BY of_group, on_group";
 	return $mysqli->query( $sql );
 }
 
 function getActuals( $type, $group )
 {
-	$mysqli = new mysqli( 'localhost', 'id511081_dcrouch1', '1corinthians39', 'id511081_main' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
 	
 	$userActuals = "none";
 	$actualTable = getActualTable( $type );
@@ -49,7 +53,7 @@ function getPersonal( $userId, $type )
 
 function getPersonalAnswers( $userId, $type )
 {
-	$mysqli = new mysqli( 'localhost', 'id511081_dcrouch1', '1corinthians39', 'id511081_main' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
 
     $userAnswers = "none";
     $userTable = getUserTable( $type );
@@ -67,7 +71,7 @@ function getPersonalAnswers( $userId, $type )
 
 function getPersonalGroup( $userId, $type )
 {
-	$mysqli = new mysqli( 'localhost', 'id511081_dcrouch1', '1corinthians39', 'id511081_main' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
 
     $group = "";
     $userTable = getUserTable( $type );
@@ -85,7 +89,7 @@ function getPersonalGroup( $userId, $type )
 
 function getPersonalAcceptsEmails( $userId, $type )
 {
-	$mysqli = new mysqli( 'localhost', 'id511081_dcrouch1', '1corinthians39', 'id511081_main' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
 
     $acceptsEmails = false;
     $userTable = getUserTable( $type );
@@ -102,7 +106,7 @@ function getPersonalAcceptsEmails( $userId, $type )
 
 function savePersonalTest( $userId, $type, $groupChoice, $answers, $acceptsEmails )
 {
-	$mysqli = new mysqli( 'localhost', 'id511081_dcrouch1', '1corinthians39', 'id511081_main' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
 
 	$userTable = getUserTable( $type );
 	$answerArray = splitAnswers( $answers );
@@ -143,7 +147,7 @@ function savePersonalTest( $userId, $type, $groupChoice, $answers, $acceptsEmail
 
 function saveGroupTest( $userId, $type, $groupId, $answers, $percentCorrect )
 {
-	$mysqli = new mysqli( 'localhost', 'id511081_dcrouch1', '1corinthians39', 'id511081_main' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
 
 	$testTable = getTestTable( $type );
 	$answerArray = splitAnswers( $answers );
@@ -194,22 +198,22 @@ function combineAnswers( $row )
 
 function getUserTable( $type )
 {
-	return "tt_" . $type . "_users";
+	return $type . "_users";
 }
 
 function getTestTable( $type )
 {
-	return "tt_" . $type . "_tests";
+	return $type . "_tests";
 }
 
 function getActualTable( $type )
 {
-	return "tt_" . $type . "_actuals";
+	return $type . "_actuals";
 }
 
 function getInfoTable( $type )
 {
-	return "tt_" . $type . "_info";
+	return $type . "_info";
 }
 
 if ( isset( $_POST['action'] ) && function_exists( $_POST['action'] ) )

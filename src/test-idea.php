@@ -1,4 +1,4 @@
-<?php include("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
+<?php require_once("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +28,7 @@
         </div>
 
         <?php
-        include("utility/html-constructor.php");
+        require_once("utility/html-constructor.php");
         constructQuestionSection( "idea" );
         include("html/submission.html");
         ?>

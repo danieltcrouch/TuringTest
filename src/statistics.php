@@ -1,4 +1,4 @@
-<?php include("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
+<?php require_once("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,8 +31,8 @@
                 </tr>
 
             <?php
-            include("utility/database.php");
-            include("utility/html-constructor.php");
+            require_once("utility/database.php");
+            require_once("utility/html-constructor.php");
             constructStatistics( $_GET['type'] )
             ?>
             </table>

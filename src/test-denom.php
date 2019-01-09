@@ -1,4 +1,4 @@
-<?php include("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
+<?php require_once("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,7 @@
         <div class="subtitle center">Christian Group Turing Test</div>
 
         <?php
-        include("utility/html-constructor.php");
+        require_once("utility/html-constructor.php");
         constructQuestionSection( "denom" );
         constructChoiceSection( "denom" );
         include("html/submission.html");

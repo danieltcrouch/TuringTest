@@ -1,4 +1,4 @@
-<?php include("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
+<?php require_once("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="col-10 main">
-        <?php include("utility/html-constructor.php"); ?>
+        <?php require_once("utility/html-constructor.php"); ?>
         <div class="center" style="padding-top: 3em"><img src="images/denom.png" class="logoImage"></div>
         <div class="subtitle center"><a class="clickable" href="statistics.php?type=denom">Denominational Turing Test</a></div>
         <div class="textBlock">Begin by taking the test for &ldquo;Your Own Beliefs&rdquo; before taking the test for the other Christian Groups. This will allow the results page to determine how similar you are to the other Christian Groups when you take those tests. At the end, before submitting, please enter some sort of unique identifier to be used across all tests. We recommend using an email address.</div>
