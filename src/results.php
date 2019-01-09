@@ -1,18 +1,18 @@
-<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/rns/common/php/startup.php"); ?>
+<?php include("$_SERVER[DOCUMENT_ROOT]/common/php/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Turing Tests</title>
-    <?php include($BASE_PATH . "/common/html/head.html"); ?>
+    <?php includeHeadInfo(); ?>
 </head>
 
 <body>
 
 	<!--Header-->
-    <?php include($BASE_PATH . "/common/html/header.html"); ?>
+    <?php includeHeader(); ?>
 
     <?php
-    	include($BASE_PATH . "/turingTest/utility/database.php");
+    	include("utility/database.php");
     	if ( isset( $_POST['id'] ) )
     	{
     		$_SESSION['tt_id'] = $_POST['id'];
@@ -80,11 +80,11 @@
     </div>
 
     <?php
-    $title = "Turing Test";
-    $description = "Take the test!";
-    $subUrl = "/rns/turingTest/results.php";
-    $subUrlSafe = "%2Frns%2FturingTest%2Fresults.php";
-    include($BASE_PATH . "/common/html/facebook.html");
+    //$title = "Turing Test";
+    //$description = "Take the test!";
+    //$subUrl = "/rns/turingTest/results.php";
+    //$subUrlSafe = "%2Frns%2FturingTest%2Fresults.php";
+    //include($BASE_PATH . "/common/html/facebook.html");
     ?>
 
 </body>
@@ -128,7 +128,5 @@
 
     setDisplay();
 </script>
-
-<?php include($BASE_PATH . "/common/html/modal.html"); ?>
-<?php include($BASE_PATH . "/common/html/toaster.html"); ?>
+<?php includeModals(); ?>
 </html>

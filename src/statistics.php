@@ -1,15 +1,15 @@
-<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/rns/common/php/startup.php"); ?>
+<?php include("$_SERVER[DOCUMENT_ROOT]/common/php/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Turing Tests</title>
-    <?php include($BASE_PATH . "/common/html/head.html"); ?>
+    <?php includeHeadInfo(); ?>
 </head>
 
 <body>
 
 	<!--Header-->
-    <?php include($BASE_PATH . "/common/html/header.html"); ?>
+    <?php includeHeader(); ?>
 
     <!--Main-->
     <div class="col-10 main">
@@ -60,7 +60,5 @@ function setDisplay()
 
 setDisplay();
 </script>
-
-<?php include($BASE_PATH . "/common/html/modal.html"); ?>
-<?php include($BASE_PATH . "/common/html/toaster.html"); ?>
+<?php includeModals(); ?>
 </html>

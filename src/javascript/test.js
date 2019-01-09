@@ -118,7 +118,7 @@ var TuringTest = function( elements, type, group )
 
 	function find()
 	{
-	    showPrompt( "Find Yourself", "If you have one, enter your identifier to load your previous answers:", findCallback, "Email Address" );
+	    showPrompt( "Find Yourself", "If you&rsquo;ve taken the test before, enter your email address to load previous answers:", findCallback, "Email Address" );
 	}
 
 	function findCallback( id )

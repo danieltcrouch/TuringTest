@@ -10,7 +10,7 @@ function constructChoiceSection( $type )
           <legend>Pick one group:</legend>
           <table>\n";
 
-    $choices = file($_SERVER["DOCUMENT_ROOT"] . "/rns/turingTest/resources/group-" . $type . ".txt");
+    $choices = file("resources/group-" . $type . ".txt");
     foreach ( $choices as $index => $choice )
     {
         $choice = explode( "|", $choice );
@@ -61,7 +61,7 @@ function constructQuestions( $type )
 {
     $suffix = getSuffix( $type );
     $fileIndex = 0;
-    $file = file($_SERVER["DOCUMENT_ROOT"] . "/rns/turingTest/resources/questions-" . $type . ".txt");
+    $file = file("resources/questions-" . $type . ".txt");
     $questionOptionCounts = getQuestionOptionCounts( $file );
     foreach ( $questionOptionCounts as $questionIndex => $questionOptionCount )
     {
@@ -126,7 +126,7 @@ function getQuestionOptionCounts( $file )
 
 function constructIndexList( $type )
 {
-    $choices = file($_SERVER["DOCUMENT_ROOT"] . "/rns/turingTest/resources/group-" . $type . ".txt");
+    $choices = file("resources/group-" . $type . ".txt");
     foreach ( $choices as $index => $choice )
     {
         $choice = explode( "|", $choice );
@@ -134,7 +134,7 @@ function constructIndexList( $type )
         {
             $groupId = $choice[0];
             $groupName = $choice[1];
-            echo "<a class=\"link\" href=\"http://religionandstory.webutu.com/rns/turingTest/test-$type.php?group=$groupId\">$groupName</a><br />\n";
+            echo "<a class=\"link\" href=\"http://turing.religionandstory.com/test-$type.php?group=$groupId\">$groupName</a><br />\n";
         }
     }
 }
