@@ -1,4 +1,6 @@
 <?php
+include_once("database.php");
+
 function constructChoiceSection( $type )
 {
     $title = getTypeTitle( $type );
@@ -141,7 +143,6 @@ function constructIndexList( $type )
 
 function constructStatistics( $type )
 {
-    include_once("database.php");
     $stats = getStatistics( $type );
     if ( $stats && $stats->num_rows > 0 )
     {

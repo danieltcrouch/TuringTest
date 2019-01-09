@@ -31,9 +31,8 @@
                 </tr>
 
             <?php
-            require_once("utility/database.php");
             require_once("utility/html-constructor.php");
-            constructStatistics( $_GET['type'] )
+            constructStatistics( $_GET['type'] );
             ?>
             </table>
         </div>

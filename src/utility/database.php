@@ -2,44 +2,44 @@
 
 function getStatistics( $type )
 {
-	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_turing' );
 
-    $actualTable = getActualTable( $type );
-    $infoTable = getInfoTable( $type );
+    $resultTable = getResultTable( $type );
+    $metaTable = getMetaTable( $type );
     $testTable = getTestTable( $type );
     $userTable = getUserTable( $type );
 	$sql = "SELECT
               $userTable.groupId as of_group,
               $testTable.groupId as on_group,
-              $infoTable.name as of_name,
-              $actualTable.userCount as of_count,
+              $metaTable.name as of_name,
+              $resultTable.userCount as of_count,
               COUNT(*) as test_count,
               AVG($testTable.percentCorrect) as user_avg,
-              (SELECT name FROM $infoTable WHERE $infoTable.groupId = $testTable.groupId LIMIT 1) as on_name
+              (SELECT name FROM $metaTable WHERE $metaTable.groupId = $testTable.groupId LIMIT 1) as on_name
             FROM $testTable
               JOIN $userTable     ON $testTable.userId =  $userTable.userId
-              JOIN $infoTable     ON $userTable.groupId = $infoTable.groupId
-              JOIN $actualTable   ON $userTable.groupId = $actualTable.groupId
+              JOIN $metaTable     ON $userTable.groupId = $metaTable.groupId
+              JOIN $resultTable   ON $userTable.groupId = $resultTable.groupId
             GROUP BY of_group, on_group";
 	return $mysqli->query( $sql );
 }
 
 function getActuals( $type, $group )
 {
-	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_turing' );
 	
-	$userActuals = "none";
-	$actualTable = getActualTable( $type );
-    $sql = "SELECT ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10 FROM $actualTable WHERE groupId = '$group'";
+	$results = "none";
+	$resultTable = getResultTable( $type );
+    $sql = "SELECT ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10 FROM $resultTable WHERE groupId = '$group'";
 
 	$result = $mysqli->query( $sql );
 	if ( $result && $result->num_rows > 0 )
 	{
 		$row = $result->fetch_assoc();
-		$userActuals = combineAnswers( $row );
+        $results = combineAnswers( $row );
 	}
 
-	return $userActuals;
+	return $results;
 }
 
 function getPersonal( $userId, $type )
@@ -53,7 +53,7 @@ function getPersonal( $userId, $type )
 
 function getPersonalAnswers( $userId, $type )
 {
-	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_turing' );
 
     $userAnswers = "none";
     $userTable = getUserTable( $type );
@@ -71,7 +71,7 @@ function getPersonalAnswers( $userId, $type )
 
 function getPersonalGroup( $userId, $type )
 {
-	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_turing' );
 
     $group = "";
     $userTable = getUserTable( $type );
@@ -89,7 +89,7 @@ function getPersonalGroup( $userId, $type )
 
 function getPersonalAcceptsEmails( $userId, $type )
 {
-	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_turing' );
 
     $acceptsEmails = false;
     $userTable = getUserTable( $type );
@@ -106,7 +106,7 @@ function getPersonalAcceptsEmails( $userId, $type )
 
 function savePersonalTest( $userId, $type, $groupChoice, $answers, $acceptsEmails )
 {
-	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_turing' );
 
 	$userTable = getUserTable( $type );
 	$answerArray = splitAnswers( $answers );
@@ -147,7 +147,7 @@ function savePersonalTest( $userId, $type, $groupChoice, $answers, $acceptsEmail
 
 function saveGroupTest( $userId, $type, $groupId, $answers, $percentCorrect )
 {
-	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_overflow' );
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_turing' );
 
 	$testTable = getTestTable( $type );
 	$answerArray = splitAnswers( $answers );
@@ -206,14 +206,14 @@ function getTestTable( $type )
 	return $type . "_tests";
 }
 
-function getActualTable( $type )
+function getResultTable($type )
 {
-	return $type . "_actuals";
+	return $type . "_results";
 }
 
-function getInfoTable( $type )
+function getMetaTable($type )
 {
-	return $type . "_info";
+	return $type . "_meta";
 }
 
 if ( isset( $_POST['action'] ) && function_exists( $_POST['action'] ) )

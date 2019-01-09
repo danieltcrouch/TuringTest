@@ -22,7 +22,7 @@
         require_once("utility/html-constructor.php");
         constructQuestionSection( "denom" );
         constructChoiceSection( "denom" );
-        include("html/submission.html");
+        include("html/submission.php");
         ?>
     </div>
 

@@ -35,8 +35,9 @@ var TuringTest = function( elements, type, group )
 
 	function setHandlers()
 	{
-		elements.idInput.on( "keyup", function ( e ) {
+		elements.idInput.on( "keydown", function ( e ) {
 			if ( e.keyCode === 13 ) {
+				e.preventDefault();
 				submitAnswer();
 			}
 		});

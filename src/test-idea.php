@@ -19,8 +19,8 @@
         <div class="subtitle center">Ideology Turing Test</div>
 
         <div id="groupChoiceSection" class="col-10 center">
-            <button id="con" name="ideology" class="bigButton inverseButton" style="width: 8em; margin: .25em;">Conservative</button>
-            <button id="lib" name="ideology" class="bigButton inverseButton" style="width: 8em; margin: .25em;">Liberal</button>
+            <button id="con" name="ideology" class="button inverseButton" style="width: 8em; margin: .25em;">Conservative</button>
+            <button id="lib" name="ideology" class="button inverseButton" style="width: 8em; margin: .25em;">Liberal</button>
 
             <div id="ideologyPrompt" class="textBlock" style="margin-top: 2em">
                 Choose an Ideology to begin.
@@ -30,7 +30,7 @@
         <?php
         require_once("utility/html-constructor.php");
         constructQuestionSection( "idea" );
-        include("html/submission.html");
+        include("html/submission.php");
         ?>
     </div>
 
