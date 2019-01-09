@@ -8,6 +8,7 @@ $homeUrl = "http://turing.religionandstory.com";
 function includeHeadInfo()
 {
     include("$_SERVER[DOCUMENT_ROOT]/../common/html/head.html");
+    //if you ever use this theme in another site, move images to Common
     echo '<link rel="shortcut icon" type="image/png" href="http://turing.religionandstory.com/images/logo.png"/>
           <link rel="apple-touch-icon" sizes="57x57" href="http://turing.religionandstory.com/images/logo-57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="http://turing.religionandstory.com/images/logo-60.png" />
