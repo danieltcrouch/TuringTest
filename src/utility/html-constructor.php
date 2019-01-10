@@ -32,9 +32,7 @@ function constructChoiceSection( $type )
 function constructQuestionSection( $type )
 {
     $title = getTypeTitle( $type );
-    echo "<div id=\"questionsSection\" class=\"col-10\" style=\"margin-bottom: 2em\">\n";
-    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/tests.css\"/>
-          <script src=\"javascript/test.js\"></script>\n\n";
+    echo "<div id=\"questionsSection\" class=\"col-10\" style=\"margin-bottom: 2em\">\n\n";
     echo "<div id=\"personalInstructions\" class=\"textBlock\" style=\"display: none\">
           Answer the questions below according to your own beliefs. Sometimes multiple answers may seem correct or they may all seem incorrect&mdash;give the <em>best</em> answer.
           </div>

@@ -4,6 +4,7 @@
 <head>
 	<title>Turing Tests</title>
     <?php includeHeadInfo(); ?>
+    <script src="javascript/test.js"></script>
 </head>
 
 <body>
@@ -89,7 +90,6 @@
 
 </body>
 
-<script src="javascript/test.js"></script>
 <script>
     var type = "<?php echo $_POST['type']; ?>";
     var group = "<?php echo $_POST['group']; ?>";

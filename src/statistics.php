@@ -4,6 +4,7 @@
 <head>
 	<title>Turing Tests</title>
     <?php includeHeadInfo(); ?>
+    <script src="javascript/test.js"></script>
 </head>
 
 <body>
@@ -40,7 +41,6 @@
 
 </body>
 
-<script src="javascript/test.js"></script>
 <script>
 function showAnswers( memberAnswers )
 {

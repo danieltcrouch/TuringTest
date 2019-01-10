@@ -10,7 +10,7 @@ function includeHeadInfo()
 {
     global $style;
     include("$_SERVER[DOCUMENT_ROOT]/../common/html/head.php");
-    echo '<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">';
+    echo '<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">\n';
     echo '<style>
               :root {
                  --mainColor:   #9D2235;
@@ -19,7 +19,7 @@ function includeHeadInfo()
                  --titleFont:   "Abril Fatface", serif;
                  --titleWeight: normal;
               }
-          </style>';
+          </style>\n';
 }
 
 function includeHeader()

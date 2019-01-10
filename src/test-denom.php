@@ -4,14 +4,15 @@
 <head>
 	<title>Turing Tests</title>
     <?php includeHeadInfo(); ?>
+    <script src="javascript/test.js"></script>
 </head>
 
 <body>
 
 	<!--Header-->
     <?php includeHeader(); ?>
-    <div class="col-10 main">
-        <div class="title center clickable"><a href="http://religionandstory.webutu.com/rns/turingTest/">Turing Tests</a></div>
+    <div class="col-10 header">
+        <div class="title center clickable"><a href="<?php echo $homeUrl; ?>">Turing Tests</a></div>
     </div>
 
     <!--Main-->

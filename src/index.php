@@ -10,7 +10,7 @@
 
 	<!--Header-->
     <?php includeHeader(); ?>
-    <div class="col-10 main">
+    <div class="col-10 header">
         <div class="title center">Turing Tests</div>
     </div>
 
