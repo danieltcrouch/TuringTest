@@ -3,7 +3,7 @@
 session_start();
 
 $project = "turingTest";
-$homeUrl = "http://turing.religionandstory.com";
+$homeUrl = "https://turing.religionandstory.com";
 $style   = "red";
 
 function includeHeadInfo()
@@ -36,7 +36,7 @@ function includeModals()
 
 function getHelpImage()
 {
-    echo "http://religionandstory.com/common/images/question-mark.png";
+    echo "https://religionandstory.com/common/images/question-mark.png";
 }
 
 function getConstructionImage()

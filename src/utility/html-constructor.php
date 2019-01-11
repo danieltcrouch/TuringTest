@@ -134,7 +134,7 @@ function constructIndexList( $type )
         {
             $groupId = $choice[0];
             $groupName = $choice[1];
-            echo "<a class=\"link\" href=\"http://turing.religionandstory.com/test-$type.php?group=$groupId\">$groupName</a><br />\n";
+            echo "<a class=\"link\" href=\"https://turing.religionandstory.com/test-$type.php?group=$groupId\">$groupName</a><br />\n";
         }
     }
 }
