@@ -4,10 +4,8 @@ include_once("database.php");
 function constructChoiceSection( $type )
 {
     $title = getTypeTitle( $type );
-    echo "<div id=\"groupChoiceSection\" class=\"col-10\" style=\"margin-bottom: 2em\">\n";
-    echo "<div class=\"textBlock\">
-          Which $title do you identify with?
-          </div>\n\n";
+    echo "<div id=\"groupChoiceSection\" class=\"col-10 textBlock\" style=\"margin-bottom: 2em\">\n";
+    echo "<div>Which $title do you identify with?</div>\n\n";
     echo "<fieldset>
           <legend>Pick one group:</legend>
           <table>\n";
@@ -32,11 +30,11 @@ function constructChoiceSection( $type )
 function constructQuestionSection( $type )
 {
     $title = getTypeTitle( $type );
-    echo "<div id=\"questionsSection\" class=\"col-10\" style=\"margin-bottom: 2em\">\n\n";
-    echo "<div id=\"personalInstructions\" class=\"textBlock\" style=\"display: none\">
+    echo "<div id=\"questionsSection\" class=\"col-10 textBlock\" style=\"margin-bottom: 2em\">\n\n";
+    echo "<div id=\"personalInstructions\" style=\"display: none; padding: 0 15%; text-align: center\">
           Answer the questions below according to your own beliefs. Sometimes multiple answers may seem correct or they may all seem incorrect&mdash;give the <em>best</em> answer.
           </div>
-          <div id=\"groupInstructions\" class=\"textBlock\" style=\"display: none\">
+          <div id=\"groupInstructions\" style=\"display: none; padding: 0 15%; text-align: center\">
           Answer the questions below according to how most practitioners of the $title have answered the question. Sometimes multiple answers may seem correct or they may all seem incorrect&mdash;give the <em>best</em> answer.
           </div>\n\n";
 

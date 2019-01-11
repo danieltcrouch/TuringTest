@@ -55,22 +55,22 @@
     <div class="col-10 main">
         <div class="subtitle center">Test Results</div>
 
-        <div id="personalResults">
-            <div class="textBlock">
+        <div id="personalResults" class="textBlock">
+            <div style="text-align: center">
                 Your personal beliefs match <span name="personalMatchPercent">[PERCENT]</span>%
                 with the members of this <span name="typeTitle">[TYPE]</span>.
             </div>
-            <div class="textBlock">
+            <div style="text-align: center">
                 Your answers will be used to average the answers for members of the <span name="typeTitle">[TYPE]</span> you have identified with.
                 Remember the ID you have chosen and enter it any time you take a test on this site.<br />
                 Note: There is no security preventing someone from using the same ID.
             </div>
         </div>
-        <div id="groupResults" style="display: none">
-            <div class="textBlock">
+        <div id="groupResults" class="textBlock" style="display: none">
+            <div style="text-align: center">
                 You answered <span name="groupMatchPercent">[PERCENT]</span>% of the questions for this <span name="typeTitle">[TYPE]</span> correctly.
             </div>
-            <div class="textBlock">
+            <div style="text-align: center">
                 Based on Step 1, your personal beliefs match <span name="personalMatchPercent">[PERCENT]</span>% with the members of this <span name="typeTitle">[TYPE]</span>.
             </div>
         </div>

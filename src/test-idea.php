@@ -19,11 +19,11 @@
     <div class="col-10 main">
         <div class="subtitle center">Ideology Turing Test</div>
 
-        <div id="groupChoiceSection" class="col-10 center">
+        <div id="groupChoiceSection" class="col-10 center" style="margin-bottom: 2em">
             <button id="con" name="ideology" class="button inverseButton" style="width: 8em; margin: .25em;">Conservative</button>
             <button id="lib" name="ideology" class="button inverseButton" style="width: 8em; margin: .25em;">Liberal</button>
 
-            <div id="ideologyPrompt" class="textBlock" style="margin-top: 2em">
+            <div id="ideologyPrompt" style="margin-top: 2em">
                 Choose an Ideology to begin.
             </div>
         </div>

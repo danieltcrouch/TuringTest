@@ -16,8 +16,8 @@
     <div class="col-10 main">
         <div class="subtitle center">Statistics</div>
 
-        <div class="col-10">
-            <div class="textBlock">
+        <div class="col-10 textBlock">
+            <div>
                 Each row describes how well a <span name="typeTitle">[TYPE]</span>, in the far-left column,
                 understands the beliefs of another <span name="typeTitle">[TYPE]</span>, the &ldquo;Subject.&rdquo;
                 The far-right column depicts the average score of test takers.
