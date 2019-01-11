@@ -49,7 +49,7 @@
             <!--div>Religions are included that have at least 0.05% of the world population with the notable exceptions of Spiritism (Cao Dao) and tribal/ethnic religions.<br /><br /></div-->
         </div>
 
-        <div class="center">
+        <div class="center" style="margin-bottom: 1em">
             Step 1:<br />
             <a class="link" href="test-world.php?group=you">Your Own Beliefs</a>
         </div>
@@ -66,7 +66,7 @@
             <div>Begin by taking the test for &ldquo;Your Own Beliefs&rdquo; before taking the test for the other Christian Groups. This will allow the results page to determine how similar you are to the other Christian Groups when you take those tests. At the end, before submitting, please enter some sort of unique identifier to be used across all tests. We recommend using an email address.</div>
         </div>
 
-        <div class="center">
+        <div class="center" style="margin-bottom: 1em">
             Step 1:<br />
             <a class="link" href="test-idea.php?group=you">Your Own Beliefs</a>
         </div>
