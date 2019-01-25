@@ -2,12 +2,22 @@
 
 session_start();
 
-$project = "turingTest";
-$homeUrl = "https://turing.religionandstory.com";
-$style   = "red";
+$project    = "turingTest";
+$siteTitle  = "Religious Turing Test";
+$pageTitle  = "Turing Test";
+$image      = "https://reviews.religionandstory.com/images/reviews.jpg";
+$description= "This test measures how well individuals know the religious views of different groups, including denominations, world religions, and ideologies like liberal and conservative.";
+$keywords   = "Turing Test,religion,faith,denomination,Christian,group,tribe,liberal,conservative,quiz";
+$homeUrl    = "https://turing.religionandstory.com";
+$style      = "red";
 
 function includeHeadInfo()
 {
+    global $siteTitle;
+    global $pageTitle;
+    global $image;
+    global $description;
+    global $keywords;
     global $style;
     include("$_SERVER[DOCUMENT_ROOT]/../common/html/head.php");
     echo '<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">';

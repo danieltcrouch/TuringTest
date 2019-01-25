@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Turing Tests</title>
     <?php includeHeadInfo(); ?>
 </head>
 

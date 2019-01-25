@@ -2,8 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Turing Tests</title>
-    <?php includeHeadInfo(); ?>
+    <?php
+    $pageTitle  = "Ideological Turing Test";
+    includeHeadInfo();
+    ?>
     <script src="javascript/test.js"></script>
 </head>
 
