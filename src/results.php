@@ -1,4 +1,4 @@
-<?php require_once("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
+<?php require_once("$_SERVER[DOCUMENT_ROOT]/php/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +12,7 @@
     <?php includeHeader(); ?>
 
     <?php
-    	require_once("utility/database.php");
+    	require_once("php/database.php");
     	if ( isset( $_POST['id'] ) )
     	{
     		$_SESSION['tt_id'] = $_POST['id'];
