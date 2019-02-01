@@ -1,4 +1,4 @@
-<?php require_once("$_SERVER[DOCUMENT_ROOT]/utility/startup.php"); ?>
+<?php require_once("$_SERVER[DOCUMENT_ROOT]/php/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="col-10 main">
-        <?php require_once("utility/html-constructor.php"); ?>
+        <?php require_once("php/html-constructor.php"); ?>
         <div class="center" style="padding-top: 3em"><img src="images/denom.png" class="logoImage"></div>
         <div class="subtitle center"><a class="clickable" href="statistics.php?type=denom">Denominational Turing Test</a></div>
         <div class="textBlock">

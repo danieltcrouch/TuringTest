@@ -127,7 +127,7 @@ var TuringTest = function( elements, type, group )
 		if ( id != null )
 		{
             $.post(
-				"utility/database.php",
+				"php/database.php",
 				{
 					userId: id,
 					type: type,
