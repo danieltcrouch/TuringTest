@@ -15,11 +15,11 @@ c|A new sort of life begins where progress is still to be made
 d|There is no life after death, or nothing can be known about it
 How should those outside the faith be viewed?
 a|They need to be saved
-b|They need to be shown a better way to live through active proselytizing</label>
+b|They need to be shown a better way to live through active proselytizing
 c|They need to be shown a better way to live, but proselytizing is not needed
 d|They should be treated with kindness
 How should violence be viewed?
-a|War and violence are acceptable ways to spread the influence of the divine</label>
+a|War and violence are acceptable ways to spread the influence of the divine
 b|War and violence are only acceptable in certain circumstances, particularly in the defense of the weak or self-defense
 c|War is acceptable in certain circumstances, but non-violence is demanded on a personal level
 d|War and violence of any kind are never acceptable
@@ -36,7 +36,7 @@ d|Humans have introduced evil through freewill
 How should this physical universe be viewed?
 a|The physical universe is inherently good or sacred
 b|The universe is cyclical and constantly changing
-c|The physical universe is bad or, at least, inferior to other realities</label>
+c|The physical universe is bad or, at least, inferior to other realities
 d|It is all there is; it is neutral
 What should be the relationship between human genders?
 a|Though this may not have always been the case, total equality between the sexes is being striven for
