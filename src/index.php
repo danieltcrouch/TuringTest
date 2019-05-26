@@ -24,7 +24,7 @@
 
     <div class="col-10 main">
         <?php require_once("php/html-constructor.php"); ?>
-        <div class="center" style="padding-top: 3em"><img src="images/denom.png" class="logoImage"></div>
+        <div class="center" style="padding-top: 3em"><img src="images/denom.png" class="icon"></div>
         <div class="subtitle center"><a class="clickable" href="statistics.php?type=denom">Denominational Turing Test</a></div>
         <div class="textBlock">
             <div>Begin by taking the test for &ldquo;Your Own Beliefs&rdquo; before taking the test for the other Christian Groups. This will allow the results page to determine how similar you are to the other Christian Groups when you take those tests. At the end, before submitting, please enter some sort of unique identifier to be used across all tests. We recommend using an email address.</div>
@@ -41,7 +41,7 @@
     </div>
 
     <div class="col-10 main">
-        <div class="center" style="padding-top: 3em"><img src="images/world.png" class="logoImage"></div>
+        <div class="center" style="padding-top: 3em"><img src="images/world.png" class="icon"></div>
         <div class="subtitle center"><a class="clickable" href="statistics.php?type=world">World Religion Turing Test</a></div>
         <div class="textBlock">
             <div>Begin by taking the test for &ldquo;Your Own Beliefs&rdquo; before taking the test for the other World Religions. This will allow the results page to determine how similar you are to the other World Religions when you take those tests. At the end, before submitting, please enter some sort of unique identifier to be used across all tests. We recommend using an email address.</div>
@@ -59,7 +59,7 @@
     </div>
 
     <div class="col-10 main">
-        <div class="center" style="padding-top: 3em"><img src="images/idea.png" class="logoImage"></div>
+        <div class="center" style="padding-top: 3em"><img src="images/idea.png" class="icon"></div>
         <div class="subtitle center"><a class="clickable" href="statistics.php?type=idea">(Christian) Ideological Turing Test</a></div>
         <div class="textBlock">
             <div>Begin by taking the test for &ldquo;Your Own Beliefs&rdquo; before taking the test for the other Christian Groups. This will allow the results page to determine how similar you are to the other Christian Groups when you take those tests. At the end, before submitting, please enter some sort of unique identifier to be used across all tests. We recommend using an email address.</div>
