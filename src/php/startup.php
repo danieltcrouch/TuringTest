@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $project    = "turingTest";
@@ -11,6 +10,19 @@ $keywords   = "Turing Test,religion,faith,denomination,Christian,group,tribe,lib
 $homeUrl    = "https://turing.religionandstory.com";
 $style      = "red";
 
+function getRootPath()
+{
+    $public = "public_html";
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $length = strpos( $path, $public ) + strlen( $public );
+    return substr( $path, 0, $length ) . "/";
+}
+
+function getSubPath()
+{
+    return getRootPath() . "turing/";
+}
+
 function includeHeadInfo()
 {
     global $siteTitle;
@@ -19,7 +31,7 @@ function includeHeadInfo()
     global $description;
     global $keywords;
     global $style;
-    include("$_SERVER[DOCUMENT_ROOT]/../common/html/head.php");
+    include(getRootPath() . "common/html/head.php");
     echo '<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">';
     echo '<style>
               :root {
@@ -35,16 +47,16 @@ function includeHeadInfo()
 function includeHeader()
 {
     global $homeUrl;
-    include("$_SERVER[DOCUMENT_ROOT]/../common/html/header.php");
+    include(getRootPath() . "common/html/header.php");
 }
 
 function includeModals()
 {
-    include("$_SERVER[DOCUMENT_ROOT]/../common/html/modal.html");
-    include("$_SERVER[DOCUMENT_ROOT]/../common/html/modal-binary.html");
-    include("$_SERVER[DOCUMENT_ROOT]/../common/html/modal-prompt.html");
-    include("$_SERVER[DOCUMENT_ROOT]/../common/html/modal-prompt-big.html");
-    include("$_SERVER[DOCUMENT_ROOT]/../common/html/toaster.html");
+    include(getRootPath() . "common/html/modal.html");
+    include(getRootPath() . "common/html/modal-binary.html");
+    include(getRootPath() . "common/html/modal-prompt.html");
+    include(getRootPath() . "common/html/modal-prompt-big.html");
+    include(getRootPath() . "common/html/toaster.html");
 }
 
 function getHelpImage()

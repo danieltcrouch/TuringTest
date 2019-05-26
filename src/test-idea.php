@@ -1,4 +1,4 @@
-<?php require_once("$_SERVER[DOCUMENT_ROOT]/php/startup.php"); ?>
+<?php require_once("php/startup.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
