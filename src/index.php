@@ -18,7 +18,7 @@
         <div class="subtitle center">Our vision</div>
         <div class="textBlock">
             <div>The idea behind this test comes from Bryan Caplan&rsquo;s idea for an Ideological Turing Test and the now deprecated website: <a class="link" href="http://econturingtest.com/">EconTuringTest.com</a>. With our test, we are hoping to measure how well individuals know the religious views of different groups, including denominations and world religions. The Turing Test questions may seem difficult or as if multiple answers are correct, but they are specifically designed to test your ability to answer questions from the perspective of select groups.</div>
-            <div>This is a side project, so play gentle and please don’t break anything. Let us know if there is any information not shared at the end of the test you&rsquo;d be interested in knowing. If your group is not included or you would like to see the findings thus far, feel free to contact us.</div>
+            <div>This is a side project, so play gentle and please don’t break anything. Let us know if there is any information not shared at the end of the test you&rsquo;d be interested in knowing. If your group is not included or you would like to see the findings thus far, feel free to <a class="link" href="mailto:danieltcrouch@gmail.com?Subject=Turing%20Test" target="_top">contact us.</a></div>
         </div>
     </div>
 
