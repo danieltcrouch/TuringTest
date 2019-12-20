@@ -186,6 +186,18 @@ function saveGroupTest( $userId, $type, $groupId, $answers, $percentCorrect )
 	return "true";
 }
 
+function saveUserId( $userId )
+{
+	$mysqli = new mysqli( 'localhost', 'religiv3_admin', '1corinthians3:9', 'religiv3_turing' );
+
+	$sql = "INSERT INTO denom_users (userId, acceptsEmails, groupId, ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10)
+            VALUES ('*$userId', 'on', '__', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x')";
+
+	$mysqli->query( $sql );
+
+	return "true";
+}
+
 function splitAnswers( $answers )
 {
 	return str_split( $answers );
@@ -206,12 +218,12 @@ function getTestTable( $type )
 	return $type . "_tests";
 }
 
-function getResultTable($type )
+function getResultTable( $type )
 {
 	return $type . "_results";
 }
 
-function getMetaTable($type )
+function getMetaTable( $type )
 {
 	return $type . "_meta";
 }
@@ -224,6 +236,10 @@ if ( isset( $_POST['action'] ) && function_exists( $_POST['action'] ) )
 	if ( isset( $_POST['userId'] ) && isset( $_POST['type'] ) )
 	{
 		$result = $action( $_POST['userId'], $_POST['type'] );
+	}
+	elseif ( isset( $_POST['userId'] ) )
+	{
+		$result = $action( $_POST['userId'] );
 	}
 	else
 	{
