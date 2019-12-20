@@ -8,7 +8,11 @@
 <body>
 
 	<!--Header-->
-    <?php includeHeader(); ?>
+    <!--?php includeHeader(); ?-->
+    <div class="col-10 navBar">
+        <a href="https://turing.religionandstory.com"><div class="col-5 navButton center">Home</div></a>
+        <a href="https://religionandstory.com/2019/12/star-wars-a-complete-review/"><div class="col-5 navButton center">Religion &amp; Story</div></a>
+    </div>
     <div class="col-10 header">
         <div class="title center">Turing Tests</div>
     </div>
